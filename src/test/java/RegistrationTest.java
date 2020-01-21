@@ -7,12 +7,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest
+public class RegistrationTest
 {
     public WebDriver driver;
-    public String testURL = "https://gas-locator.com/smf/";
+    public String testURL = "https://gas-locator.com/smf/index.php?action=register";
 
     public String userName = "TestUser";
+    public String userMail = "yesefif754@etopmail.com";
     public String userPassword = "password";
 
     @BeforeMethod
@@ -23,12 +24,18 @@ public class LoginTest
     }
 
     @Test
-    public void testForumLogin() throws InterruptedException
+    public void testForumRegistration() throws InterruptedException
     {
-        WebElement nameInputBox = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[2]/div[1]/form/input[1]"));
+        WebElement nameInputBox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/form/div[3]/fieldset/dl[1]/dd[1]/input"));
         nameInputBox.sendKeys(userName);
 
-        WebElement passwordInputBox = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[2]/div[1]/form/input[2]"));
+        WebElement emailInputBox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/form/div[3]/fieldset/dl[1]/dd[2]/input"));
+        emailInputBox.sendKeys(userMail);
+
+        WebElement passwordInputBox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/form/div[3]/fieldset/dl[2]/dd/input"));
+        passwordInputBox.sendKeys(userPassword);
+
+        passwordInputBox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/form/div[3]/fieldset/dl[3]/dd/input"));
         passwordInputBox.sendKeys(userPassword);
         passwordInputBox.submit();
 
