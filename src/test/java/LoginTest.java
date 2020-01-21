@@ -33,7 +33,7 @@ public class LoginTest
         passwordInputBox.sendKeys(userPassword);
         passwordInputBox.submit();
 
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         WebElement profileAvatar = driver.findElement(By.className("avatars"));
         Assert.assertTrue(profileAvatar.getSize().width != 0);
     }
