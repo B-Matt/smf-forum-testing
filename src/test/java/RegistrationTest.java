@@ -17,7 +17,7 @@ public class RegistrationTest
     public String userPassword = "password";
 
     @BeforeMethod
-    public void setupTest() throws InterruptedException {
+    public void setupTest() {
         //System.setProperty("webdriver.chrome.driver", "C:/Drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.navigate().to(testURL);
@@ -39,7 +39,7 @@ public class RegistrationTest
         passwordInputBox.sendKeys(userPassword);
         passwordInputBox.submit();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement showUserPosts = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[2]/div[1]/ul/li[2]/a"));
         Assert.assertTrue(showUserPosts.getSize().width != 0);
     }
