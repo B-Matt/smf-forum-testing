@@ -23,15 +23,15 @@ public class CreatingTopicTest extends TestBase
         ForumTopicPage topicPage = PageFactory.initElements(driver, ForumTopicPage.class);
 
         topicPage.clickBoardTitle();
-        Thread.sleep(200);
-
+        Thread.sleep(500);
         topicPage.clickCreateNewButton();
         Thread.sleep(500);
-
         topicPage.setTopicTitle(topicTitle);
+        Thread.sleep(500);
         topicPage.setTopicMessage(topicMessage);
+        Thread.sleep(500);
         topicPage.submitTopicPost();
-        Thread.sleep(200);
+        Thread.sleep(500);
 
         Assert.assertEquals(topicPage.getBoardTopicTitle(), topicTitle);
     }

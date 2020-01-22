@@ -26,17 +26,14 @@ public class PostingInTopicTest extends TestBase
         ForumTopicPage topicPage = PageFactory.initElements(driver, ForumTopicPage.class);
 
         topicPage.clickBoardTitle();
-        Thread.sleep(200);
-
+        Thread.sleep(500);
         topicPage.clickFirstTopic();
-        Thread.sleep(200);
-
+        Thread.sleep(500);
         topicPage.clickCreateNewButton();
-        Thread.sleep(200);
-
+        Thread.sleep(500);
         topicPage.setTopicMessage(postMessage);
+        Thread.sleep(500);
         topicPage.submitTopicPost();
-        Thread.sleep(200);
 
         Assert.assertEquals(topicPage.getBoardTopicTitle(), topicTitle);
     }

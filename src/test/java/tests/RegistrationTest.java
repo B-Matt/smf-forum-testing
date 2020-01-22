@@ -13,6 +13,9 @@ public class RegistrationTest extends TestBase
     private String userMail = "yesefif75445@etopmail.com";
     private String userPassword = "password";
 
+    /**
+     * Checks users ability to register new account.
+     */
     @Test
     public void testForumRegistration() throws InterruptedException
     {

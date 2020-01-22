@@ -120,18 +120,16 @@ public class WebDriverFactory
             webDriver = new ChromeDriver();
         }
         else if (FIREFOX.equals(browser)) {
-
+            setFirefoxDriver();
             webDriver = new FirefoxDriver();
-
         }
         else if (INTERNET_EXPLORER.equals(browser)) {
             isSupportedPlatform(browser);
             webDriver = new InternetExplorerDriver();
-
         }
         else if (OPERA.equals(browser)) {
+            //setOperaDriver();
             webDriver = new OperaDriver();
-
         }
         else if (SAFARI.equals(browser)) {
             isSupportedPlatform(browser);
@@ -176,12 +174,30 @@ public class WebDriverFactory
     }
 
     /*
-     * Helper method to set ChromeDriver location into the right ststem property
+     * Helper method to set ChromeDriver location into the right system property
      */
     private static void setChromeDriver()
     {
         System.setProperty("webdriver.chrome.driver",
                 System.getProperty("user.dir") + "/src/test/java/drivers/chromedriver.exe");
+    }
+
+    /*
+     * Helper method to set FirefoxDriver location into the right system property
+     */
+    private static void setFirefoxDriver()
+    {
+        System.setProperty("webdriver.gecko.driver",
+                System.getProperty("user.dir") + "/src/test/java/drivers/geckodriver.exe");
+    }
+
+    /*
+     * Helper method to set OperaDriver location into the right system property
+     */
+    private static void setOperaDriver()
+    {
+        System.setProperty("webdriver.opera.driver",
+                System.getProperty("user.dir") + "/src/test/java/drivers/operadriver.exe");
     }
 
     private static void isSupportedPlatform(String browser)

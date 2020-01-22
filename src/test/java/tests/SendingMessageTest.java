@@ -14,6 +14,9 @@ public class SendingMessageTest extends TestBase
     public String messageSubject = "Test Private Message";
     public String messageText = "Lorem ipsum amet.";
 
+    /**
+     * Checks users ability to send someone private message.
+     */
     @Test
     public void testSendingForumMessage() throws InterruptedException
     {

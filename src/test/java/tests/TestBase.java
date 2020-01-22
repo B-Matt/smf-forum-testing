@@ -23,8 +23,8 @@ public class TestBase
     @AfterSuite
     public void teardown()
     {
-        /*if(driver != null) {
+        if(driver != null) {
             driver.quit();
-        }*/
+        }
     }
 }
