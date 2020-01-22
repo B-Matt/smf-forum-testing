@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Holds web elements and methods for interaction with those elements for Forum Login tests.
+ */
 public class ForumLoginPage
 {
     @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/div/div[2]/div[1]/form/input[1]")

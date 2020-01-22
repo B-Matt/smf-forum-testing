@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+/**
+ * Holds web elements and methods for interaction with those elements for forum private message tests.
+ */
 public class ForumMessagePage
 {
     @FindBy(how = How.XPATH, using = "/html/body/div/div[2]/div/div/div[2]/ul/li[1]/a/span")

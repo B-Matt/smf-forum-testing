@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Holds web elements and methods for interaction with those elements for forum topic tests.
+ */
 public class ForumTopicPage
 {
     @FindBy(how = How.NAME, using = "b1")
