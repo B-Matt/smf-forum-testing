@@ -10,10 +10,7 @@ public class LoginTest extends TestBase
     public String userName = "TestUser";
     public String userPassword = "password";
 
-    /**
-     * Checks users ability to login into account.
-     */
-    @Test
+    @Test(description = "Login into users account")
     public void testForumLogin() throws InterruptedException
     {
         ForumLoginPage loginPage = PageFactory.initElements(driver, ForumLoginPage.class);

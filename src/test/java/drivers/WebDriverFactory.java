@@ -23,7 +23,6 @@ public class WebDriverFactory
     public static final String OPERA = "opera";
     public static final String INTERNET_EXPLORER = "ie";
     public static final String SAFARI = "safari";
-    public static final String PHANTOMJS = "phantomjs";
 
     /* Platform constants */
     public static final String WINDOWS = "windows";
@@ -33,73 +32,6 @@ public class WebDriverFactory
     public static final String LINUX = "linux";
 
     private WebDriverFactory() {}
-
-    /*
-     * Factory method to return a RemoteWebDriver instance given the url of the
-     * Grid hub and a Browser instance.
-     *
-     * @param gridHubUrl : grid hub URI
-     *
-     * @param browser : Browser object containing info around the browser to hit
-     *
-     * @param username : username for BASIC authentication on the page to test
-     *
-     * @param password : password for BASIC authentication on the page to test
-     *
-     * @return RemoteWebDriver
-     */
-    public static WebDriver getInstance(String url, Browser browser, String username, String password)
-    {
-        WebDriver webDriver = null;
-
-        DesiredCapabilities capability = new DesiredCapabilities();
-        String browserName = browser.getName();
-        capability.setJavascriptEnabled(true);
-
-        // In case there is no Hub
-        if (url == null || url.length() == 0) {
-            return getInstance(browserName);
-        }
-
-        if (CHROME.equals(browserName)) {
-            capability = DesiredCapabilities.chrome();
-        }
-        else if (FIREFOX.equals(browserName)) {
-            capability = DesiredCapabilities.firefox();
-            FirefoxProfile ffProfile = new FirefoxProfile();
-
-            if (username != null && password != null) {
-                ffProfile.setPreference("network.http.phishy-userpass-length",
-                        255);
-                capability.setCapability(FirefoxDriver.PROFILE, ffProfile);
-            }
-            capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
-        }
-        else if (INTERNET_EXPLORER.equals(browserName)) {
-            capability = DesiredCapabilities.internetExplorer();
-            capability .setCapability(
-                            InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
-                            true);
-        }
-        else if (OPERA.equals(browserName)) {
-            capability = DesiredCapabilities.opera();
-        }
-        else if (SAFARI.equals(browserName)) {
-            capability = DesiredCapabilities.safari();
-        }
-        else if (PHANTOMJS.equals(browserName)){
-            capability = DesiredCapabilities.phantomjs();
-        }
-        setVersionAndPlatform(capability, browser.getVersion(), browser.getPlatform());
-
-        // Create Remote WebDriver
-        try {
-            webDriver = new RemoteWebDriver(new URL(url), capability);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return webDriver;
-    }
 
     /*
      * Factory method to return a WebDriver instance given the browser to hit
