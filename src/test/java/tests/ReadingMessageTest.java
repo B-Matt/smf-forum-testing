@@ -11,10 +11,7 @@ public class ReadingMessageTest extends TestBase
 {
     public String expectedMessage = "Testiranje sustava";
 
-    /**
-     * Checks users ability read private message.
-     */
-    @Test
+    @Test(description = "Reads private message")
     public void testReadingForumMessage() {
         ForumMessagePage messagePage = PageFactory.initElements(driver, ForumMessagePage.class);
 

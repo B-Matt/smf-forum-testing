@@ -1,6 +1,5 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,12 +12,8 @@ public class RegistrationTest extends TestBase
     private String userMail = "yesefif75445@etopmail.com";
     private String userPassword = "password";
 
-    /**
-     * Checks users ability to register new account.
-     */
-    @Test
-    public void testForumRegistration() throws InterruptedException
-    {
+    @Test(description = "Registration of new account")
+    public void testForumRegistration() {
         ForumLoginPage loginPage = PageFactory.initElements(driver, ForumLoginPage.class);
         ForumRegisterPage registerPage = PageFactory.initElements(driver, ForumRegisterPage.class);
 
@@ -27,7 +22,6 @@ public class RegistrationTest extends TestBase
         registerPage.setPassword(userPassword);
         registerPage.clickRegisterButton();
 
-        //Thread.sleep(1000);
         Assert.assertTrue(loginPage.getUserPostsLink().getSize().width != 0);
     }
 }

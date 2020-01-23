@@ -25,7 +25,7 @@ public class TestBase
     }
 
     @AfterMethod
-    public void aftertest(ITestResult result)
+    public void afterTest(ITestResult result)
     {
         if(result.getStatus() == ITestResult.FAILURE)
         {
@@ -35,7 +35,7 @@ public class TestBase
     }
 
     @AfterSuite
-    public void teardown()
+    public void tearDown()
     {
         if(driver != null) {
             driver.quit();

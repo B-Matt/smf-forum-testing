@@ -14,10 +14,7 @@ public class CreatingTopicTest extends TestBase
             "Maecenas a nulla erat. Nam vel rhoncus dui, ornare sagittis lectus. " +
             "Vivamus tellus tortor, sodales vitae mattis a, scelerisque sit amet leo.";
 
-    /**
-     * Checks creating new topics in forum.
-     */
-    @Test
+    @Test(description = "Creates new topic in the forum")
     public void testPostingInTopic() throws InterruptedException
     {
         ForumTopicPage topicPage = PageFactory.initElements(driver, ForumTopicPage.class);

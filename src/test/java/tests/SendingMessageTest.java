@@ -14,10 +14,7 @@ public class SendingMessageTest extends TestBase
     public String messageSubject = "Test Private Message";
     public String messageText = "Lorem ipsum amet.";
 
-    /**
-     * Checks users ability to send someone private message.
-     */
-    @Test
+    @Test(description = "Sends private message to a given user")
     public void testSendingForumMessage() throws InterruptedException
     {
         ForumMessagePage messagePage = PageFactory.initElements(driver, ForumMessagePage.class);

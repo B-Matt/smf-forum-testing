@@ -11,16 +11,13 @@ import pages.ForumTopicPage;
 
 public class PostingInTopicTest extends TestBase
 {
-    public String topicTitle = "Welcome to SMF!"; // ima error tu s krivim titleom
+    public String topicTitle = "Welcome to SMF!";
     
     public String postMessage = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
                                 "Maecenas a nulla erat. Nam vel rhoncus dui, ornare sagittis lectus. " +
                                 "Vivamus tellus tortor, sodales vitae mattis a, scelerisque sit amet leo.";
 
-    /**
-     * Checks posting new posts inside given topic.
-     */
-    @Test
+    @Test(description = "Create new post inside given topic")
     public void testPostingInTopic() throws InterruptedException
     {
         ForumTopicPage topicPage = PageFactory.initElements(driver, ForumTopicPage.class);
