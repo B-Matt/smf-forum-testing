@@ -48,7 +48,7 @@ For testing this framework I have used [dummy forum](https://gas-locator.com/smf
 
 License
 -------
-Licensed under the MIT license. For more information see [LICENSE.txt](LICENSE.txt).
+Licensed under the MIT license. For more information see [LICENSE](LICENSE).
 
 References
 -----
