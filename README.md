@@ -1,10 +1,11 @@
 [Simple Machines Forum Testing Framework][github]
 =================================================
-This framework helps to test the Simple Machines Forum forum. The tests were done with Selenium WebDriver. Using webdriver factory the developer can test forum on many internet browsers. If the test fails then framework will capture a screenshot and save it in `target/screens`.
+[![Version][version_badge]][version]
+
+I made this framework for my college coursework. It helps developers test the [Simple Machines Forum](https://www.simplemachines.org/) forum. The tests were done with Selenium WebDriver. Using webdriver factory the developer can test forum on many internet browsers. If the test fails then framework will capture a screenshot and save it in `target/screens`.
 
 Installation
 -----
-
 1. [Install Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 2. [Install IntelliJ](https://www.jetbrains.com/idea/download/)
 3. Download web driver (use web driver for the web browser you **use**):
@@ -16,7 +17,7 @@ Installation
 |Opera |https://github.com/operasoftware/operachromiumdriver/releases |
 4. Clone this project:
 `git clone https://github.com/B-Matt/forum-testing.git`
-	
+5. Find some dummy SMF forum or host it yourself ([SMF download](https://download.simplemachines.org/)).
 	
 This framework allows the user [cross browser testing](https://www.softwaretestinghelp.com/how-is-cross-browser-testing-performed).  To change testing browser you need to edit `init()` function inside [TestBase.java](https://github.com/B-Matt/forum-testing/blob/master/src/test/java/tests/TestBase.java).
 
@@ -33,7 +34,6 @@ The framework was coded using the Page Object Model (POM) design pattern. Page O
 
 Available tests
 -----
-
 For testing this framework I have used [dummy forum](https://gas-locator.com/smf/index.php). If you want to change testing URL's, you need to edit page classes.
 
 
@@ -48,18 +48,17 @@ For testing this framework I have used [dummy forum](https://gas-locator.com/smf
 
 License
 -------
-
 Licensed under the MIT license. For more information see [LICENSE.txt](LICENSE.txt).
 
 References
 -----
-
 [LV 2 - Automatsko testiranje Web aplikacija (Frontend) - Selenium
-Web Driver (FERIT)]([https://www.ferit.unios.hr/studiji/sveucilisni-diplomski-studij/DRac1-06-18/38#anc](https://www.ferit.unios.hr/studiji/sveucilisni-diplomski-studij/DRac1-06-18/38#anc))
+Web Driver (FERIT)](https://www.ferit.unios.hr/studiji/sveucilisni-diplomski-studij/DRac1-06-18/38#anc)
 
 [Page Object Model (POM) | Design Pattern](https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b)
 
 [Page Object Model (POM)](https://www.geeksforgeeks.org/page-object-model-pom)
 
 [github]: https://github.com/B-Matt/forum-testing
-
+[version]: https://badge.fury.io/gh/B-Matt%2Fsmf-forum-testing
+[version_badge]: https://badge.fury.io/gh/B-Matt%2Fsmf-forum-testing.svg
