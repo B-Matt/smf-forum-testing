@@ -39,12 +39,12 @@ For testing this framework I have used [dummy forum](https://gas-locator.com/smf
 
 | Class Name | Description |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|RegistrationTest | Allows testing the registration of new forum accounts by completing a simple registration form without a captcha test. |
-|LoginTest | Allows testing the logging of users into an existing forum account by filling out the login form on the forum homepage. |
-|SendingMessageTest | Allows testing sending a private message to the other users in the forum. |
-|ReadingMessageTest | Allows testing reading a private message by the default message title. |
-|PostingInTopicTest | Allows testing writing new posts in existing forum threads. |
-|CreatingTopicTest | Allows testing posting new forum threads in existing forum boards. |
+|[RegistrationTest][registertest] | Allows testing the registration of new forum accounts by completing a simple registration form without a captcha test. |
+|[LoginTest][logintest] | Allows testing the logging of users into an existing forum account by filling out the login form on the forum homepage. |
+|[SendingMessageTest][messagesend] | Allows testing sending a private message to the other users in the forum. |
+|[ReadingMessageTest][messageread] | Allows testing reading a private message by the default message title. |
+|[PostingInTopicTest][posting] | Allows testing writing new posts in existing forum threads. |
+|[CreatingTopicTest][postingtopic] | Allows testing posting new forum threads in existing forum boards. |
 
 License
 -------
@@ -62,3 +62,9 @@ Web Driver (FERIT)](https://www.ferit.unios.hr/studiji/sveucilisni-diplomski-stu
 [github]: https://github.com/B-Matt/forum-testing
 [version]: https://badge.fury.io/gh/B-Matt%2Fsmf-forum-testing
 [version_badge]: https://badge.fury.io/gh/B-Matt%2Fsmf-forum-testing.svg
+[registertest]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/RegistrationTest.java
+[logintest]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/LoginTest.java
+[posting]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/PostingInTopicTest.java
+[postingtopic]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/CreatingTopicTest.java
+[messagesend]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/SendingMessageTest.java
+[messageread]: https://github.com/B-Matt/smf-forum-testing/blob/master/src/test/java/tests/ReadingMessageTest.java
